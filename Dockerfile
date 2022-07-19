@@ -4,7 +4,7 @@ ENV     username=
 ENV     password=
 ENV     timezone=Asia/Hong_Kong
 
-COPY    ./redis_surfshark.py /usr/python/redis_surfshark.py
+COPY    ./surfshark_wireguard_token.py /usr/python/surfshark_wireguard_token.py
 COPY    ./entrypoint.sh /entrypoint.sh
 
 RUN     apk add --no-cache wireguard-tools at && \

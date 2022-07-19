@@ -30,7 +30,7 @@ echo ${timezone} > /etc/timezone
 cp /usr/share/zoneinfo/${timezone} /etc/localtime
 
 #execute custom script for 1st time
-python /usr/python/redis_surfshark.py
+python /usr/python/surfshark_wireguard_token.py
 
 #keep system running after executing script
 tail -f /dev/null
