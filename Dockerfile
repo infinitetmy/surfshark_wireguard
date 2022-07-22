@@ -8,6 +8,7 @@ COPY    ./surfshark_wireguard_token.py /usr/python/surfshark_wireguard_token.py
 COPY    ./entrypoint.sh /entrypoint.sh
 
 RUN     apk add --no-cache wireguard-tools at && \
-        pip install redis requests pytz
+        pip install redis requests pytz && \
+        chmod 0755 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
